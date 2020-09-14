@@ -37,7 +37,7 @@ def main():
 
     parsed_csv_data = parse_csv(input_file, tsv=is_tsv)
 
-    if to_stdout is True:
+    if to_stdout is True or output_file is None:
         print(json.dumps(parsed_csv_data, indent=4, sort_keys=True))
 
     if output_file is not None:
